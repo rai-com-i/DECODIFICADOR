@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decodificador</title>
+    <link rel="stylesheet" href="Styles/style.css">
+    <link rel="icon" href="imagens/image.png">
+</head>
+<body>
+    <header>
+        <img class="logo1" src="imagens/image.png" alt="Logo da Alura">
+    </header>
+    <main class="decodificador">
+        <section class="input">
+            <textarea name="mensagem" id="mensagem" placeholder="Digite seu texto"></textarea>
+            <div class="buttons">
+                <span><img src="imagens/image copy.png" alt="Exclamation icon" width="50%"></span>
+                <button type="button" class="criptografar">Criptografar</button>
+                <button type="button" class="descriptografar">Descriptografar</button>
+            </div>
+        </section>
+        <section class="output">
+            <div class="nomessage">
+                <img src="imagens/pessoa.svg" alt="Nenhuma mensagem encontrada">
+                <h1>Nenhuma mensagem encontrada</h1>
+                <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+            </div>
+            <div class="active hidden">
+                <textarea name="output" id="outmessage"></textarea>
+                <button type="button" class="copiar">Copiar</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido por <a href=https://github.com/rai-com-i><strong>Raí Machado</strong></a></p>
+    </footer>
+    <script src="Styles/script.js"></script>
+</body>
+</html>

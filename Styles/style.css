@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    --primary-color: #0A3871;
+    --white: #D8DFE8;
+    --gray: #495057;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.logo1{
+    width: 10%;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    height: 100vh;
+}
+
+header {
+    margin: 2.5rem 0;
+}
+
+main.decodificador {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: space-between;
+    gap: 10rem;
+    height: 90%;
+}
+
+.decodificador .input {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 1rem;
+    justify-content: space-evenly;
+}
+
+.decodificador .input #mensagem {
+    font-family: "Inter", sans-serif;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    border-style: none;
+    height: 70%;
+    outline: none;
+    padding: 1rem;
+    align-items: start;
+}
+
+.decodificador .input #mensagem::placeholder {
+    color: var(--primary-color);
+}
+
+.decodificador .input .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    position: relative;
+}
+
+button {
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 30px;
+    font-size: 1.4rem;
+    transition: box-shadow 0.1s linear;
+    cursor: pointer;
+}
+
+.decodificador .input .buttons .criptografar {
+    color: var(--white);
+    background-color: var(--primary-color);
+    outline: none;
+    border: none;
+}
+
+button:active {
+    box-shadow: 0px 0px 10px rgb(19, 34, 70);
+}
+
+.decodificador .input .buttons .descriptografar, button.copiar {
+    color: var(--primary-color);
+    background-color: var(--white);
+    border: 1px solid var(--primary-color);
+}
+
+
+.decodificador .buttons span {
+    position: absolute;
+    left: 0;
+    top: -50%;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--gray);
+}
+
+.decodificador .output {
+    flex-basis: 30%;
+}
+
+.decodificador .output .active {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-evenly;
+    flex-basis: 30%;
+    gap: 1rem;
+}
+
+.decodificador .output > *.hidden {
+    display: none;
+}
+
+.decodificador #outmessage {
+    width: 100%;
+    height: 70%;
+    color: var(--gray);
+    font-family: "Inter", sans-serif;
+    font-size: 2rem;
+    border-style: none;
+    outline: none;
+    padding: 1rem;
+    user-select: none;
+    pointer-events: none;
+}
+
+.output > * {
+    height: 100%;
+}
+
+.output .nomessage {
+    display: flex;
+    color: var(--gray);
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    flex: 0;
+}
+
+.output .nomessage h1, .output .nomessage p {
+    margin: 1rem 0;
+}
+
+@media (max-width: 414px) {
+    header {
+        margin: 1.5rem 0;
+    }
+
+    body {
+        height: 100%;
+    }
+
+    main.decodificador {
+        flex-direction: column;
+        margin: 1.5rem 0 3rem 0;
+        height: 100%;
+        width: 100%;
+        justify-content: flex-start;
+        gap: 3rem;
+    }
+
+    .decodificador .input, .decodificador .output {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 1rem;
+    }
+    
+    .decodificador .input #mensagem {
+        margin-bottom: 2rem;
+        padding: 0;
+        height: 45vh;
+    }
+    
+    .decodificador .output #outmessage {
+        height: 50vh;
+        box-sizing: border-box;
+    }
+    
+    .decodificador .input .buttons {
+        flex-direction: column;
+    }
+
+    .decodificador .input .buttons button {
+        box-sizing: border-box;
+    }
+
+    .decodificador .buttons span {
+        top: -30%;
+    }
+
+    .decodificador .nomessage img {
+        display: none;
+    }
+}
+
+@media (orientation: portrait) and (min-width: 376px) {
+
+    body {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: auto;
+    }
+    
+    header {
+        align-self: start;
+    }
+    
+    main.decodificador {
+        box-sizing: content-box;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 1rem;
+        width: 90%;
+    }
+
+    .decodificador .input #mensagem {
+        height: 50vh;
+    }
+
+    .decodificador .output {
+        margin-bottom: 2rem;
+    }
+
+    .decodificador .output #outmessage {
+        box-sizing: border-box;
+        height: 50vh;
+    }
+
+    .decodificador .nomessage {
+        margin-top: 3rem;
+    }
+
+    .decodificador .nomessage img {
+        display: none;
+    }
+}
+
+footer {
+    padding: 1rem 0;
+}
+
+footer, footer a {
+    text-align: center;
+    color: black;
+}
